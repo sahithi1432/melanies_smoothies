@@ -40,7 +40,7 @@ if ingredients_list:
         st.write('Your Smoothie is ordered,', name_on_order)
       
 # new info about smoothies nutrition
- import streamlit as st
+import streamlit as st
 
 try:
     response = requests.get("https://my.smoothiefroot.com/api/fruit/watermelon")
