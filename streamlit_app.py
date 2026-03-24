@@ -39,18 +39,9 @@ if ingredients_list:
         session.sql(my_insert_stmt).collect()
         st.write('Your Smoothie is ordered,', name_on_order)
       
-# new info about smoothies nutrition
-#import streamlit as st
-
-#try:
-#    response = requests.get("https://my.smoothiefroot.com/api/fruit/watermelon")
-#    st.write(response.json())
-#except Exception as e:
-#    st.error(e)
-
-
 
 import requests  
 smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/watermelon")  
-st.text(smoothiefroot_response.json())
+#st.text(smoothiefroot_response.json())
+sf_df= st.dataframe(data=smoothiefroot_response.json(),use_container_width=True) 
         
